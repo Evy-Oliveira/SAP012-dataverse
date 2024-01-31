@@ -20,9 +20,11 @@
     <h1>Otaku's List</h1>
   </header>
 
+<section>
   <section id="filtro">
     <label for="streaming">Filtrar por</label>
     <select data-testid="select-filter" id="streaming" name="streaming">
+      <option value="todos">Todos</option>
       <option value="Netflix">Netflix</option>
       <option value="Crunchyroll">Crunchyroll</option>
       <option value="Star+">Star+</option>
@@ -38,7 +40,16 @@
     </select>
   </section>
 
+  <details class="meu-menu">
+    <summary>Confira as Estatísticas</summary>
+    <section class="estatisticas">       
+    </section>
+  </details>
+</section>
+</section>
+
   <main>
+    <h2>Deseja saber mais sobre animes?</h2>
     <section id="root">
       <!-- <ul id="cartoes"> -->
       <!-- <li class="cartao" itemscope itemtype="cardcaptor-sakura">
@@ -62,14 +73,13 @@
               <p>Studio: <span itemprop="studio">Madhouse</span></p>
             </section>
         </li> -->
-        <!-- </ul> -->
-      </section>
-    </main>
-    <footer>
-      <p>Desenvolvido por Evelyn &amp; Flaviane</p>
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+      <!-- </ul> -->
+    </section>
+  </main>
+  <footer>
+    <p>Desenvolvido por Evelyn &amp; Flaviane</p>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
-      
-   
