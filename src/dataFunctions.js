@@ -48,13 +48,8 @@ export const sortBy = (data, sortBy, sortOrder) => {
     return result;
   });
 
-  // if (sortOrder === 'desc') {
-  //   ordenacao.reverse();
-  // }
 
   return ordenacao;
 };
 
-// export const computeStates = (data) => {
-//   return [];
-// };
+
