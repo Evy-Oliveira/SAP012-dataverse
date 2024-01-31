@@ -43,11 +43,8 @@ ordenacao.addEventListener('change', (event) => {
   const valorOrdenado = sortBy(dadosExibidos,'name',valorOrdenacao)
   listaCartao.innerHTML = ""
   listaCartao.appendChild(renderItems(valorOrdenado))
-  // console.log(data,'name',valorOrdenacao, dadosExibidos)
+  
 })
-
-// console.log(example, renderItems(data), data);
-
 
 //estatistica
 const classificationList = document.querySelector('.estatisticas');
