@@ -7,6 +7,7 @@ describe('example', () => {
   fakeData
 
   it('returns `example`', () => {
+    fakeData.length;
     expect(example()).toBe('example');
   });
 });
