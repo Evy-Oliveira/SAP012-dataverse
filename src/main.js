@@ -27,10 +27,12 @@ botaoFiltra.addEventListener('change', (event) => {
 })
 
 // limpar  area filtrada
-const limparBotao = document.getElementById('limpar-filtro');
+const limparBotao = document.getElementById('button-clear');
 
 limparBotao.addEventListener('click', () => {
-  listaCartao.innerHTML = ""
+  listaCartao.innerHTML = "";
+  ordenacao.value = "";
+  botaoFiltra.value = "";
   listaCartao.appendChild(renderItems(data))
 })
 
