@@ -35,7 +35,7 @@ export const renderListClassification = (percents)=>{
 
   for(const classification in percents){
     const li = document.createElement('li');
-    li.textContent = `Classicação ${classification}: ${percents[classification].toFixed(2)}%`;
+    li.textContent = `Classicação ${classification}: ${percents[classification]}%`;
     ul.appendChild(li);
   }
   return ul;
