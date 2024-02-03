@@ -20,7 +20,7 @@ export const computeStats = (data) => {
   const productCount = classifications.length;
 
   const percents = Object.keys(count).reduce((accumulator, classification) => {
-    accumulator[classification] = (count[classification] / productCount) * 100;
+    accumulator[classification] = parseFloat(((count[classification] / productCount) * 100).toFixed(2));
     return accumulator;
   }, {});
   return percents;
