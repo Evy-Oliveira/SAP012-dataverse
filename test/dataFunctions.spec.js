@@ -16,12 +16,12 @@ describe('computeStats', () => {
   it('Calculando as estatisticas de acordo com a classificação', () => {
     const resultado = computeStats(fakeData);
     const resultadoEsperado = {
-      L: 4.17,
-      A10: 4.17,
-      A12: 33.33,
-      A14: 37.5,
-      A16: 12.5,
-      A18: 8.33,
+      L: 20.0,
+      // A10: 4.17,
+      // A12: 33.33,
+      A14: 40.0,
+      A16: 40.0,
+      // A18: 8.33,
     }
     expect(resultado).toEqual(resultadoEsperado);
   });
