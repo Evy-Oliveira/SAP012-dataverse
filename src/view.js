@@ -7,7 +7,7 @@ export const renderItems = (data) => {
     <li class="cartao" itemscope itemtype="${item.id}">
       <section class="info-externa">
         <p class="classificacao cl-${item.extraInfo.classification}"><span itemprop="classification">${item.extraInfo.classification}</span></p>
-        <figure> <img class"imgAnime" itemprop="imageUrl" src="${item.imageUrl}"  title="${item.name}"></figure>
+        <figure class="container-img"> <img class"imgAnime" itemprop="imageUrl" src="${item.imageUrl}"  title="${item.name}"></figure>
         <h5 class="nomeAnime"><span itemprop="name">${item.name}</span></h5>
         <p class="avaliacao"><span itemprop="assessment">${parseFloat(item.extraInfo.assessment)}</span></p>
         <p class="plataforma"><span itemprop="streaming">${item.extraInfo.streaming}</span></p>
