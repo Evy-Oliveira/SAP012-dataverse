@@ -216,7 +216,7 @@ export default [
       "seasons": 20,
       "episodes": 1090,
       "classification": "A12",
-      "assessment": 5.6,
+      "assessment": 5.0,
       "streaming": "Netflix",
       "song": ["We Are(interpretada por Hiroshi Kitadan)"]
     }
