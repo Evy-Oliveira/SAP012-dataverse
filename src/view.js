@@ -16,8 +16,7 @@ export const renderItems = (data) => {
         <figure class="container-img"> <img class"imgAnime" itemprop="imageUrl" src="${item.imageUrl}"  title="${item.name}"></figure>
         <h5 class="nomeAnime"><span itemprop="name">${item.name}</span></h5>
         <p class="avaliacao"><span itemprop="assessment">${ratingValue}</span> ${ratingStars}</p>
-        <p class="plataforma"><span itemprop="streaming">${item.extraInfo.streaming}</span></p>
-        <p class="temporadas">Temporadas <span itemprop="seasons">${item.extraInfo.seasons}</span></p>
+        <p class="temporadasPlataforma"><span itemprop="seasons">${item.extraInfo.seasons}</span> Temporada${(item.extraInfo.seasons>1)?'s':''} - <span itemprop="streaming">${item.extraInfo.streaming}</span></p>
         <button class="botaoModal" onclick="openModal('${item.id}')">Curiosidades</button>
       </section>
       <section class="curiosidades" id="modal-${item.id}">
