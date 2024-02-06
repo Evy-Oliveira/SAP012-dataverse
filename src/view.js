@@ -3,13 +3,19 @@ export const renderItems = (data) => {
   cartoes.classList.add('cartoes');
   // Aquí comienza tu código y puedes retornar lo que tu necesites
   data.forEach((item) => {
+    const ratingValue = parseFloat(item.extraInfo.assessment);
+    const fullStars = Math.floor(ratingValue);
+    const emptyStars = 5 - fullStars;
+    
+    const ratingStars = '\u2605'.repeat(fullStars)  + '\u2606'.repeat(emptyStars);
+
     cartoes.innerHTML += `
     <li class="cartao" itemscope itemtype="${item.id}">
       <section class="info-externa">
         <p class="classificacao cl-${item.extraInfo.classification}"><span itemprop="classification">${item.extraInfo.classification}</span></p>
         <figure class="container-img"> <img class"imgAnime" itemprop="imageUrl" src="${item.imageUrl}"  title="${item.name}"></figure>
         <h5 class="nomeAnime"><span itemprop="name">${item.name}</span></h5>
-        <p class="avaliacao"><span itemprop="assessment">${parseFloat(item.extraInfo.assessment)}</span></p>
+        <p class="avaliacao"><span itemprop="assessment">${ratingValue}</span> ${ratingStars}</p>
         <p class="plataforma"><span itemprop="streaming">${item.extraInfo.streaming}</span></p>
         <p class="temporadas">Temporadas <span itemprop="seasons">${item.extraInfo.seasons}</span></p>
         <button class="botaoModal" onclick="openModal('${item.id}')">Curiosidades</button>
