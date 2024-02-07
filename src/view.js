@@ -25,9 +25,9 @@ export const renderItems = (data) => {
         <p class="descricao"><span itemprop="description">${item.description}</span>.</p>
         <p class="episodios">Episódios: <span itemprop="episodes">${item.extraInfo.episodes}</span></p>
         <p class="musica">Canção: <span itemprop="song">${item.extraInfo.song.join(", ")}</span></p>
-        <p class="criador">Criador: <span itemprop="creator">${item.facts.creator}</span></p>
-        <p class="produtor">Produtor: <span itemprop="producer">${item.facts.producer}</span></p>
-        <p class="studio">Studio: <span itemprop="studio">${item.facts.studio}</span></p>
+        <p class="criador">Criador: <span itemprop="creator">${item.facts.creatorOfManga}</span></p>
+        <p class="produtor">Produtor: <span itemprop="producer">${item.facts.producerOfManga}</span></p>
+        <p class="studio">Studio: <span itemprop="studio">${item.facts.studioOfManga}</span></p>
       </section >
     </li >
   `;
