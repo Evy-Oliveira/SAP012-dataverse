@@ -12,10 +12,10 @@ export const renderItems = (data) => {
         <p><span itemprop="assessment">${parseFloat(item.extraInfo.assessment)}</span></p>
         <p><span itemprop="streaming">${item.extraInfo.streaming}</span></p>
         <p>Temporadas <span itemprop="seasons">${item.extraInfo.seasons}</span></p>
-        <button onclick="openModal()">Curiosidades</button>
+        <button onclick="openModal('${item.id}')">Curiosidades</button>
       </section>
       <section class="curiosidades" id="modal-${item.id}">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close" onclick="closeModal('${item.id}')">&times;</span>
         <h6><span itemprop="shortDescription">${item.shortDescription}</span ></h6 >
         <p><span itemprop="description">${item.description}</span>.</p>
         <p>Episódios: <span itemprop="episodes">${item.extraInfo.episodes}</span></p>
