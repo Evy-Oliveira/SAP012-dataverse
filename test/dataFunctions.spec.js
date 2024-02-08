@@ -1,7 +1,5 @@
-import { filterBy, sortBy, computeStats} from '../src/dataFunctions.js';
-import { data as fakeData, mockOriginal, mockCrescente, mockDecrescente} from './data.js';
-
-// console.log(fakeData);
+import { filterBy, sortBy, computeStats } from '../src/dataFunctions.js';
+import { data as fakeData, mockCrescente, mockDecrescente } from './data.js';
 
 
 
@@ -10,29 +8,29 @@ describe('filterby', () => {
 
   it('filtra dados por plataforma de streaming', () => {
     fakeData.length;
-    // let comparacaoStreaming = netflix
+    
     const filteredData = filterBy(fakeData, 'streaming', 'netflix');
     expect(filteredData.every(item => item.extraInfo.streaming === 'netflix')).toBe(true);
   });
-  // it('lida com a propriedade extraInfo ou filterBy ausente', () => {
-  //   const filteredData = filterBy([{ name: 'Cardcaptor Sakura' }], 'streaming', 'netflix');
+  it('filtra dados por plataforma de streaming Crunchyrol', () => {
+    const filteredData = filterBy(fakeData, 'straming', 'Crunchyroll');
+    expect(filteredData.every(item => item.extraInfo.streaming === 'Crunchyrol')).toBe(true);
+  });
+  it('filtra dados por plataforma de streaming Star+', () => {
+    const filteredData = filterBy(fakeData, 'straming', 'Star+');
+    expect(filteredData.every(item => item.extraInfo.streaming === 'Star+')).toBe(true);
 
-  //   // Verifica se a função lida corretamente com dados que não possuem a estrutura esperada
-  //   expect(filteredData).toEqual([]);
-  // });
-  
+  });
+
 });
 describe('computeStats', () => {
   it('Calculando as estatisticas de acordo com a classificação', () => {
     const resultado = computeStats(fakeData);
     const resultadoEsperado = {
       L: 20.0,
-      // A10: 4.17,
-      // A12: 33.33,
       A12: 20.0,
       A14: 20.0,
       A16: 40.0,
-      // A18: 8.33,
     }
     expect(resultado).toEqual(resultadoEsperado);
   });
@@ -52,7 +50,7 @@ describe('sortBy', () => {
 
   it('ordenação de dados pelos os anime de A-Z', () => {
     const ordenarData = sortBy(fakeData, 'name', 'asc')
-    // console.log(ordenarData);
+    
     expect(ordenarData).toStrictEqual(mockCrescente);
   });
   it('ordenação de dados pelos os animes de Z-A', () => {
