@@ -1,7 +1,7 @@
 // Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
 
 export const filterBy = (data, filterBy, value) => {
-  
+
   const itemSelecionado = data.filter(item => {
     if ('extraInfo' in item && filterBy in item.extraInfo)
       return item.extraInfo[filterBy] === value
@@ -29,26 +29,26 @@ export const computeStats = (data) => {
 
 export const sortBy = (data, sortBy, sortOrder) => {
   const ordenacao = [...data];
-   ordenacao.sort((a, b) => {
+  ordenacao.sort((a, b) => {
     let result = 0;
 
     if (a[sortBy] < b[sortBy]) {
-     
-        result = -1;
-      } else {
-        result = 1;
-      }
- 
-    
+
+      result = -1;
+    } else {
+      result = 1;
+    }
+
+
     return result;
   });
 
-  if(sortOrder === 'asc'){
+  if (sortOrder === 'asc') {
     return ordenacao;
-  } else{
+  } else {
     return ordenacao.reverse();
   }
-  
+
 };
 
 
