@@ -17,7 +17,7 @@ export const renderItems = (data) => {
       <section class="curiosidades" id="modal-${item.id}">
         <span class="close" onclick="closeModal('${item.id}')">&times;</span>
         <h6><span itemprop="shortDescription">${item.shortDescription}</span ></h6 >
-        <p><span itemprop="description">${item.description}</span>.</p>
+        <p><span itemprop="description">${item.description}</span></p>
         <p>Episódios: <span itemprop="episodes">${item.extraInfo.episodes}</span></p>
         <p>Canção: <span itemprop="song">${item.extraInfo.song.join(", ")}</span></p>
         <p>Criador: <span itemprop="creator">${item.facts.creator}</span></p>
