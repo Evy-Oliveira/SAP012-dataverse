@@ -135,48 +135,7 @@ export const mockDecrescente = [
   }, 
 ];
 
-// export const mockOriginal = [
-//   {
-//     "id": "cardcaptor-sakura",
-//     "name": "Cardcaptor Sakura",
-//     "extraInfo": {
-//       "classification": "L",
-//       "streaming": "Crunchyroll",
-//     }
-//   },
-//   {
-//     "id": "yu-yu-hakusho",
-//     "name": "Yu Yu Hakusho",
-//     "extraInfo": {
-//       "classification": "A16",
-//       "streaming": "Crunchyroll",
-//     }
-//   },
-//   {
-//     "id": "death-note",
-//     "name": "Death Note",
-//     "extraInfo": {
-//       "classification": "A16",
-//       "streaming": "Netflix",
-//     }
-//   },
-//   {
-//     "id": "demon-slayer",
-//     "name": "Demon Slayer",
-//     "extraInfo": {
-//       "classification": "A14",
-//       "streaming": "Netflix",
-//     }
-//   },
-//   {
-//     "id": "bleach",
-//     "name": "Bleach",
-//     "extraInfo": {
-//       "classification": "A12",
-//       "streaming": "Star+",
-//     }
-//   },
-// ];
+
 
 
 
