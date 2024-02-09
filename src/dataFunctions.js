@@ -7,7 +7,6 @@ export const filterBy = (data, filterBy, value) => {
   });
 
   return itemSelecionado;
-
 };
 
 export const computeStats = (data) => {
