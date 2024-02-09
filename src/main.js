@@ -27,7 +27,7 @@ botaoFiltra.addEventListener('change', (event) => {
 })
 
 // limpar  area filtrada
-const limparBotao = document.getElementById('button-clear');
+const limparBotao = document.getElementById('limpar-filtro');
 
 limparBotao.addEventListener('click', () => {
   listaCartao.innerHTML = "";
