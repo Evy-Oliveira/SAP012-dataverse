@@ -1,7 +1,7 @@
 export const renderItems = (data) => {
   const cartoes = document.createElement('ul');
   cartoes.classList.add('cartoes');
-  // Aquí comienza tu código y puedes retornar lo que tu necesites
+ 
   data.forEach((item) => {
     const ratingValue = parseFloat(item.extraInfo.assessment);
     const fullStars = Math.floor(ratingValue);
@@ -22,12 +22,12 @@ export const renderItems = (data) => {
       <section class="curiosidades" id="modal-${item.id}">
         <span class="close" onclick="closeModal('${item.id}')">&times;</span>
         <h6 class="genero"><span itemprop="shortDescription">${item.shortDescription}</span ></h6 >
-        <p class="descricao"><span itemprop="description">${item.description}</span>.</p>
-        <p class="episodios">Episódios: <span itemprop="episodes">${item.extraInfo.episodes}</span></p>
-        <p class="musica">Canção: <span itemprop="song">${item.extraInfo.song.join(", ")}</span></p>
-        <p class="criador">Criador: <span itemprop="creator">${item.facts.creatorOfManga}</span></p>
-        <p class="produtor">Produtor: <span itemprop="producer">${item.facts.producerOfManga}</span></p>
-        <p class="studio">Studio: <span itemprop="studio">${item.facts.studioOfManga}</span></p>
+        <p class="descricao"><span itemprop="description">${item.description}</span></p>
+        <p class="episodios">Episódios: <span class="valor" itemprop="episodes">${item.extraInfo.episodes}</span></p>
+        <p class="musica">Canção: <span class="valor" itemprop="song">${item.extraInfo.song.join(", ")}</span></p>
+        <p class="criador">Criador: <span class="valor" itemprop="creator">${item.facts.creatorOfManga}</span></p>
+        <p class="produtor">Produtor: <span class="valor" itemprop="producer">${item.facts.producerOfManga}</span></p>
+        <p class="studio">Studio: <span class="valor" itemprop="studio">${item.facts.studioOfManga}</span></p>
       </section >
     </li >
   `;
