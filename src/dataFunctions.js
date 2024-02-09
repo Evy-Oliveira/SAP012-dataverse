@@ -38,7 +38,6 @@ export const sortBy = (data, sortBy, sortOrder) => {
       result = 1;
     }
 
-
     return result;
   });
 
@@ -49,5 +48,3 @@ export const sortBy = (data, sortBy, sortOrder) => {
   }
 
 };
-
-
