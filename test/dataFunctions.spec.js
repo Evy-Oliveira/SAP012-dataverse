@@ -1,8 +1,6 @@
 import { filterBy, sortBy, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData, mockCrescente, mockDecrescente } from './data.js';
 
-
-
 describe('filterby', () => {
 
   it('filtra dados por plataforma de streaming', () => {
@@ -42,8 +40,6 @@ describe('computeStats', () => {
     expect(somaPorcentagens).toBe(100);
   })
 });
-
-
 
 describe('sortBy', () => {
 
