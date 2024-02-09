@@ -58,7 +58,6 @@ window.openModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
   modal.style.display = "block";
 }
-
 window.closeModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
   modal.style.display = "none";
