@@ -31,6 +31,8 @@ const limparBotao = document.getElementById('limpar-filtro');
 
 limparBotao.addEventListener('click', () => {
   listaCartao.innerHTML = ""
+  ordenacao.value = "";
+  botaoFiltra.value = "";
   listaCartao.appendChild(renderItems(data))
 })
 

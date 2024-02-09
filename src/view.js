@@ -12,12 +12,12 @@ export const renderItems = (data) => {
         <p><span itemprop="assessment">${parseFloat(item.extraInfo.assessment)}</span></p>
         <p><span itemprop="streaming">${item.extraInfo.streaming}</span></p>
         <p>Temporadas <span itemprop="seasons">${item.extraInfo.seasons}</span></p>
-        <button onclick="openModal()">Curiosidades</button>
+        <button onclick="openModal('${item.id}')">Curiosidades</button>
       </section>
       <section class="curiosidades" id="modal-${item.id}">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close" onclick="closeModal('${item.id}')">&times;</span>
         <h6><span itemprop="shortDescription">${item.shortDescription}</span ></h6 >
-        <p><span itemprop="description">${item.description}</span>.</p>
+        <p><span itemprop="description">${item.description}</span></p>
         <p>Episódios: <span itemprop="episodes">${item.extraInfo.episodes}</span></p>
         <p>Canção: <span itemprop="song">${item.extraInfo.song.join(", ")}</span></p>
         <p>Criador: <span itemprop="creator">${item.facts.creator}</span></p>
@@ -29,6 +29,18 @@ export const renderItems = (data) => {
   })
   return cartoes;
 };
+
+export const renderListClassification = (percents)=>{
+  const ul = document.createElement('ul');
+  ul.id = "listaClassificacao";
+
+  for(const classification in percents){
+    const li = document.createElement('li');
+    li.textContent = `Classicação ${classification}: ${percents[classification].toFixed(2)}%`;
+    ul.appendChild(li);
+  }
+  return ul;
+}
 
 
 
