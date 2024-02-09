@@ -4,11 +4,10 @@ import { data as fakeData, mockCrescente, mockDecrescente } from './data.js';
 
 
 describe('filterby', () => {
-  // fakeData
 
   it('filtra dados por plataforma de streaming', () => {
     fakeData.length;
-    
+
     const filteredData = filterBy(fakeData, 'streaming', 'netflix');
     expect(filteredData.every(item => item.extraInfo.streaming === 'netflix')).toBe(true);
   });
@@ -50,7 +49,7 @@ describe('sortBy', () => {
 
   it('ordenação de dados pelos os anime de A-Z', () => {
     const ordenarData = sortBy(fakeData, 'name', 'asc')
-    
+
     expect(ordenarData).toStrictEqual(mockCrescente);
   });
   it('ordenação de dados pelos os animes de Z-A', () => {

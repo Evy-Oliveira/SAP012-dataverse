@@ -1,5 +1,3 @@
-// Aqui puedes agregar los datos que necesites para tus pruebas
-// al menos debe tener uno que se llame "data"
 
 export const data = [
   {
@@ -34,7 +32,7 @@ export const data = [
       "streaming": "Star+",
     }
   },
-  
+
   {
     "id": "demon-slayer",
     "name": "Demon Slayer",
@@ -43,7 +41,7 @@ export const data = [
       "streaming": "Netflix",
     }
   },
-  
+
 ];
 
 export const mockCrescente = [
@@ -63,7 +61,7 @@ export const mockCrescente = [
       "streaming": "Crunchyroll",
     }
   },
-  
+
   {
     "id": "death-note",
     "name": "Death Note",
@@ -80,7 +78,7 @@ export const mockCrescente = [
       "streaming": "Netflix",
     }
   },
-  
+
   {
     "id": "yu-yu-hakusho",
     "name": "Yu Yu Hakusho",
@@ -116,7 +114,7 @@ export const mockDecrescente = [
       "streaming": "Netflix",
     }
   },
- 
+
   {
     "id": "cardcaptor-sakura",
     "name": "Cardcaptor Sakura",
@@ -132,7 +130,7 @@ export const mockDecrescente = [
       "classification": "A12",
       "streaming": "Star+",
     }
-  }, 
+  },
 ];
 
 

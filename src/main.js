@@ -30,7 +30,7 @@ botaoFiltra.addEventListener('change', (event) => {
 const limparBotao = document.getElementById('limpar-filtro');
 
 limparBotao.addEventListener('click', () => {
-  listaCartao.innerHTML = ""
+  listaCartao.innerHTML = "";
   ordenacao.value = "";
   botaoFiltra.value = "";
   listaCartao.appendChild(renderItems(data))
@@ -45,11 +45,8 @@ ordenacao.addEventListener('change', (event) => {
   const valorOrdenado = sortBy(dadosExibidos,'name',valorOrdenacao)
   listaCartao.innerHTML = ""
   listaCartao.appendChild(renderItems(valorOrdenado))
-  // console.log(data,'name',valorOrdenacao, dadosExibidos)
+  
 })
-
-// console.log(example, renderItems(data), data);
-
 
 //estatistica
 const classificationList = document.querySelector('.estatisticas');
@@ -61,7 +58,6 @@ window.openModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
   modal.style.display = "block";
 }
-
 window.closeModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
   modal.style.display = "none";
