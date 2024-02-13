@@ -7,7 +7,6 @@ export const filterBy = (data, filterBy, value) => {
   });
 
   return itemSelecionado;
-
 };
 
 export const computeStats = (data) => {
@@ -38,7 +37,6 @@ export const sortBy = (data, sortBy, sortOrder) => {
       result = 1;
     }
 
-
     return result;
   });
 
@@ -49,5 +47,3 @@ export const sortBy = (data, sortBy, sortOrder) => {
   }
 
 };
-
-

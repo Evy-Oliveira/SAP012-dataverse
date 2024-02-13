@@ -57,6 +57,16 @@ classificationList.appendChild(renderListClassification(computeStats(data)));
 window.openModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
   modal.style.display = "block";
+   // Criar e adicionar o elemento de fundo transparente
+   const overlay = document.createElement('div');
+   overlay.classList.add('modal-overlay');
+   document.body.appendChild(overlay);
+ 
+   // Adicionar um evento de clique ao overlay para fechar o modal
+   overlay.addEventListener('click', () => {
+     closeModal(id);
+     document.body.removeChild(overlay); // Remover o overlay quando o modal for fechado
+   });
 }
 window.closeModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
