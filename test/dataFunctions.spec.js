@@ -9,13 +9,13 @@ describe('filterby', () => {
     const filteredData = filterBy(fakeData, 'streaming', 'netflix');
     expect(filteredData.every(item => item.extraInfo.streaming === 'netflix')).toBe(true);
   });
-  it('filtra dados por plataforma de streaming Crunchyrol', () => {
-    const filteredData = filterBy(fakeData, 'straming', 'Crunchyroll');
-    expect(filteredData.every(item => item.extraInfo.streaming === 'Crunchyrol')).toBe(true);
+  it('filtra dados por plataforma de streaming Crunchyroll', () => {
+    const filteredData = filterBy(fakeData, 'streaming', 'crunchyroll');
+    expect(filteredData.every(item => item.extraInfo.streaming === 'crunchyroll')).toBe(true);
   });
   it('filtra dados por plataforma de streaming Star+', () => {
-    const filteredData = filterBy(fakeData, 'straming', 'Star+');
-    expect(filteredData.every(item => item.extraInfo.streaming === 'Star+')).toBe(true);
+    const filteredData = filterBy(fakeData, 'streaming', 'star+');
+    expect(filteredData.every(item => item.extraInfo.streaming === 'star+')).toBe(true);
 
   });
 
