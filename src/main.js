@@ -1,5 +1,5 @@
 
-import {filterBy, sortBy, computeStats } from './dataFunctions.js';
+import { filterBy, sortBy, computeStats } from './dataFunctions.js';
 
 import { renderItems, renderListClassification } from './view.js';
 
@@ -42,10 +42,10 @@ const ordenacao = document.getElementById('ordenacao');
 
 ordenacao.addEventListener('change', (event) => {
   const valorOrdenacao = event.target.value;
-  const valorOrdenado = sortBy(dadosExibidos,'name',valorOrdenacao)
+  const valorOrdenado = sortBy(dadosExibidos, 'name', valorOrdenacao)
   listaCartao.innerHTML = ""
   listaCartao.appendChild(renderItems(valorOrdenado))
-  
+
 })
 
 //estatistica
@@ -54,21 +54,21 @@ classificationList.appendChild(renderListClassification(computeStats(data)));
 
 
 //modal
-window.openModal = (id) => {
-  const modal = document.querySelector("#modal-" + id);
-  modal.style.display = "block";
-   // Criar e adicionar o elemento de fundo transparente
-   const overlay = document.createElement('div');
-   overlay.classList.add('modal-overlay');
-   document.body.appendChild(overlay);
- 
-   // Adicionar um evento de clique ao overlay para fechar o modal
-   overlay.addEventListener('click', () => {
-     closeModal(id);
-     document.body.removeChild(overlay); // Remover o overlay quando o modal for fechado
-   });
-}
 window.closeModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
   modal.style.display = "none";
+}
+window.openModal = (id) => {
+  const modal = document.querySelector("#modal-" + id);
+  modal.style.display = "block";
+  // Criar e adicionar o elemento de fundo transparente
+  const overlay = document.createElement('div');
+  overlay.classList.add('modal-overlay');
+  document.body.appendChild(overlay);
+
+  // Adicionar um evento de clique ao overlay para fechar o modal
+  overlay.addEventListener('click', () => {
+    window.closeModal(id);
+    document.body.removeChild(overlay); // Remover o overlay quando o modal for fechado
+  });
 }

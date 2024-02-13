@@ -20,6 +20,7 @@ export const renderItems = (data) => {
         <button class="botaoModal" onclick="openModal('${item.id}')">Curiosidades</button>
       </section>
       <section class="curiosidades" id="modal-${item.id}">
+        <span class="close" onclick="closeModal('${item.id}')">&times;</span>
         <h6 class="genero"><span itemprop="shortDescription">${item.shortDescription}</span ></h6 >
         <p class="descricao"><span itemprop="description">${item.description}</span></p>
         <p class="episodios">Episódios: <span class="valor" itemprop="episodes">${item.extraInfo.episodes}</span></p>
