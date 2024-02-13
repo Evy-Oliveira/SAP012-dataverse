@@ -1,22 +1,25 @@
 import { filterBy, sortBy, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData, mockCrescente, mockDecrescente } from './data.js';
 
-describe('filterby', () => {
-
+describe('filterBy', () => {
   it('filtra dados por plataforma de streaming', () => {
     fakeData.length;
 
-    const filteredData = filterBy(fakeData, 'streaming', 'netflix');
-    expect(filteredData.every(item => item.extraInfo.streaming === 'netflix')).toBe(true);
+    const filteredData = filterBy(fakeData, 'streaming', 'Netflix');
+    expect(filteredData.every(item => item.extraInfo.streaming === 'Netflix')).toBe(true);
   });
   it('filtra dados por plataforma de streaming Crunchyroll', () => {
-    const filteredData = filterBy(fakeData, 'streaming', 'crunchyroll');
-    expect(filteredData.every(item => item.extraInfo.streaming === 'crunchyroll')).toBe(true);
+    const filteredData = filterBy(fakeData, 'streaming', 'Crunchyroll');
+    expect(filteredData.every(item => item.extraInfo.streaming === 'Crunchyroll')).toBe(true);
   });
   it('filtra dados por plataforma de streaming Star+', () => {
-    const filteredData = filterBy(fakeData, 'streaming', 'star+');
-    expect(filteredData.every(item => item.extraInfo.streaming === 'star+')).toBe(true);
+    const filteredData = filterBy(fakeData, 'streaming', 'Star+');
+    expect(filteredData.every(item => item.extraInfo.streaming === 'Star+')).toBe(true);
 
+  });
+  it('Retornar array vazio quando não há correspondências', () => {
+    const filteredData = filterBy(fakeData, 'streaming', 'Disney+');
+    expect(filteredData.every(item => item.extraInfo.streaming === 'Disney+' )).toBe(true);
   });
 
 });

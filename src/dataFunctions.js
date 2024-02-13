@@ -2,12 +2,17 @@
 export const filterBy = (data, filterBy, value) => {
 
   const itemSelecionado = data.filter(item => {
-    if ('extraInfo' in item && filterBy in item.extraInfo)
-      return item.extraInfo[filterBy] === value
+    if (item && item.extraInfo && filterBy in item.extraInfo &&
+      item.extraInfo[filterBy] === value
+    ) {
+      return true;
+    }
+    return false;
   });
 
   return itemSelecionado;
 };
+
 
 export const computeStats = (data) => {
   const classifications = data.map(obj => obj.extraInfo.classification);
