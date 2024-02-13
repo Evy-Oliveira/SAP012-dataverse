@@ -54,6 +54,7 @@ classificationList.appendChild(renderListClassification(computeStats(data)));
 
 
 //modal
+<<<<<<< HEAD
 window.closeModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
   modal.style.display = "none";
@@ -72,7 +73,23 @@ window.openModal = (id) => {
     document.body.removeChild(overlay); // Remover o overlay quando o modal for fechado
   });
 }
+=======
+>>>>>>> 651e34d9758278a6379f49defae7186ab3f32159
 window.closeModal = (id) => {
   const modal = document.querySelector("#modal-" + id);
   modal.style.display = "none";
+}
+window.openModal = (id) => {
+  const modal = document.querySelector("#modal-" + id);
+  modal.style.display = "block";
+  // Criar e adicionar o elemento de fundo transparente
+  const overlay = document.createElement('div');
+  overlay.classList.add('modal-overlay');
+  document.body.appendChild(overlay);
+
+  // Adicionar um evento de clique ao overlay para fechar o modal
+  overlay.addEventListener('click', () => {
+    window.closeModal(id);
+    document.body.removeChild(overlay); // Remover o overlay quando o modal for fechado
+  });
 }
