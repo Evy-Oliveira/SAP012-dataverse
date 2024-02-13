@@ -146,6 +146,6 @@ Projeto Finalizado
 
 ## 10. Desenvolvido
 
-Projeto desenvolvido por: Evenly Severino  e Flaviane Lima
+Projeto desenvolvido por: Evelyn Oliveira  e Flaviane Lima
 
 
