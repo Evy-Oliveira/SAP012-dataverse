@@ -310,19 +310,6 @@ footer p {
     max-width: 300px;
   }
 }
-@media(max-width: 768px){
-  .cartao{
-  width: 35vh;
-  height: 45vh;
-}
-}
-@media(max-width:1024px){
-  .cartao {
-    width: 20%;
-    min-width: 200px;
-    max-width: 300px;
-  }
-}
 @media (min-width: 1440px) {
   .cartao {
     width: 30%; /* Define a largura dos cartões */
