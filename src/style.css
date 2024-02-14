@@ -137,12 +137,12 @@ h2 {
   text-align: center;
   background: #d9d9d9;
   border-radius: 5px;
+  max-width: 250px;
+  min-width: 200px;
   width: 30vh;
   height: 40vh;
   margin: 4px;
   padding: 6px;
-  
-
 }
 .classificacao {
   border-radius: 5px;
@@ -297,3 +297,38 @@ footer p {
   font-weight: 400;
   line-height: normal;
 }
+@media(max-width: 768px){
+  .cartao{
+  width: 35vh;
+  height: 45vh;
+}
+}
+@media(max-width:1024px){
+  .cartao {
+    width: 20%;
+    min-width: 200px;
+    max-width: 300px;
+  }
+}
+@media(max-width: 768px){
+  .cartao{
+  width: 35vh;
+  height: 45vh;
+}
+}
+@media(max-width:1024px){
+  .cartao {
+    width: 20%;
+    min-width: 200px;
+    max-width: 300px;
+  }
+}
+@media (min-width: 1440px) {
+  .cartao {
+    width: 30%; /* Define a largura dos cartões */
+    min-width: 150x; /* Largura mínima */
+    max-width: 220px; /* Largura máxima */
+  }
+}
+
+
