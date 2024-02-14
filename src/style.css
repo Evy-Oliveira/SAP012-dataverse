@@ -297,13 +297,14 @@ footer p {
   font-weight: 400;
   line-height: normal;
 }
-@media(max-width: 768px){
-  .cartao{
-  width: 35vh;
-  height: 45vh;
+@media(max-width: 768px) {
+  .cartao {
+    width: 35vh;
+    height: 45vh;
+  }
 }
-}
-@media(max-width:1024px){
+
+@media(max-width:1024px) {
   .cartao {
     width: 20%;
     min-width: 200px;
